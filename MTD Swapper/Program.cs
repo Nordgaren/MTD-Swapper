@@ -9,8 +9,9 @@ namespace MTD_Swapper
 
         static void Main(string[] args)
         {
+
             var redOrHuman = YesNo("Hit 1 to make red phantoms appear as human, press 0 to revert");
-            var mtdFile = $@"{ExeDir}\DATA\mtd\Mtd.mtdbnd";
+            var mtdFile = $@"{ExeDir}\mtd\Mtd.mtdbnd";
             Console.Write("\n");
 
             if (!File.Exists(mtdFile))
