@@ -1,11 +1,13 @@
 ﻿using System;
+using System.Diagnostics;
 using System.IO;
+using System.Reflection;
 using SoulsFormats;
 namespace MTD_Swapper
 {
     class Program
     {
-        public static readonly string ExeDir = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+        public static readonly string ExeDir = Path.GetDirectoryName(Process.GetCurrentProcess().MainModule.FileName);
 
         static void Main(string[] args)
         {
@@ -17,6 +19,7 @@ namespace MTD_Swapper
             if (!File.Exists(mtdFile))
             {
                 Console.WriteLine("Cannot find MTD file. Please run this in your Dark Souls Directory.");
+                Console.WriteLine(ExeDir);
                 Console.ReadLine();
                 return;
             }
@@ -43,6 +46,7 @@ namespace MTD_Swapper
             mtdBND.Write(mtdFile);
 
             Console.WriteLine("Patching Complete. Please restart your game!");
+            Console.ReadLine();
         }
 
         static bool YesNo(string message)
