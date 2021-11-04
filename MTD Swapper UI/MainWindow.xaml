@@ -1,0 +1,28 @@
+﻿<Window x:Class="MTD_Swapper_UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MTD_Swapper_UI"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="200" Width="400">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Margin="0,10,0,0" >
+            <TextBlock Text="Human Phantoms to get rid of red aura around red phantoms so they look human" TextWrapping="Wrap" TextAlignment="Center" HorizontalAlignment="Center" Height="33" Width="334"/>
+            <TextBlock Text="Red Phantom button changes them back." TextWrapping="Wrap" TextAlignment="Center" HorizontalAlignment="Center" Height="20" Width="334"/>
+            <TextBlock Text="Restart Dark Souls after patching" TextWrapping="Wrap" TextAlignment="Center" HorizontalAlignment="Center" Height="15" Width="334"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Margin="0,10,0,0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" >
+            <Button Content="Human Phantoms" Margin="0,0,0,0" Height="25" Click="ButtonHuman" />
+            <Button Content="Red Phantoms" Width="100" Height="25" Margin="125,0,0,0" Click="ButtonRed" />
+        </StackPanel>
+    </Grid>
+</Window>

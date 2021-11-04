@@ -5,22 +5,28 @@ using System.Reflection;
 using SoulsFormats;
 namespace MTD_Swapper
 {
-    class Program
+    public class MTDPatcher
     {
         public static readonly string ExeDir = Path.GetDirectoryName(Process.GetCurrentProcess().MainModule.FileName);
 
         static void Main(string[] args)
         {
-
             var redOrHuman = YesNo("Hit 1 to make red phantoms appear as human, press 0 to revert");
-            var mtdFile = $@"{ExeDir}\mtd\Mtd.mtdbnd";
             Console.Write("\n");
+
+            PatchMTDs(redOrHuman);
+
+            Console.WriteLine("Patching Complete. Please restart your game!");
+            Console.ReadLine();
+        }
+
+        public static void PatchMTDs(bool redOrHuman)
+        {
+            var mtdFile = $@"{ExeDir}\mtd\Mtd.mtdbnd";
 
             if (!File.Exists(mtdFile))
             {
                 Console.WriteLine("Cannot find MTD file. Please run this in your Dark Souls Directory.");
-                Console.WriteLine(ExeDir);
-                Console.ReadLine();
                 return;
             }
 
@@ -33,9 +39,9 @@ namespace MTD_Swapper
                     mtd = MTD.Read(file.Bytes);
             }
 
-            mtd.Params[0].Value = redOrHuman ? new float[] { 0f ,0f,0f, 0f} : new float[] { 1f, .2f, .2f, .4f };
-            mtd.Params[1].Value = redOrHuman ? new float[] { 0f ,0f,0f, 0f} : new float[] { -1f, -1f, -1f, .4f };
-            mtd.Params[7].Value = redOrHuman ? new float[] { 0f ,0f,0f} : new float[] { 1f, .2f, .2f };
+            mtd.Params[0].Value = redOrHuman ? new float[] { 0f, 0f, 0f, 0f } : new float[] { 1f, .2f, .2f, .4f };
+            mtd.Params[1].Value = redOrHuman ? new float[] { 0f, 0f, 0f, 0f } : new float[] { -1f, -1f, -1f, .4f };
+            mtd.Params[7].Value = redOrHuman ? new float[] { 0f, 0f, 0f } : new float[] { 1f, .2f, .2f };
 
             foreach (var file in mtdBND.Files)
             {
@@ -44,9 +50,6 @@ namespace MTD_Swapper
             }
 
             mtdBND.Write(mtdFile);
-
-            Console.WriteLine("Patching Complete. Please restart your game!");
-            Console.ReadLine();
         }
 
         static bool YesNo(string message)
