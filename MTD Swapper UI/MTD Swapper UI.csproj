@@ -5,11 +5,16 @@
     <TargetFramework>net5.0-windows</TargetFramework>
     <RootNamespace>MTD_Swapper_UI</RootNamespace>
     <UseWPF>true</UseWPF>
-	  <IncludeAllContentForSelfExtract>true</IncludeAllContentForSelfExtract>
+	<IncludeAllContentForSelfExtract>true</IncludeAllContentForSelfExtract>
+	<ApplicationIcon>icon\MTDSwapper.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MTD Swapper\MTD Swapper.csproj" />
+    <ProjectReference Include="..\..\SoulsFormats\SoulsFormats\SoulsFormats.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="MTDSwapper.ico" />
   </ItemGroup>
 
 </Project>

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MTD_Swapper_UI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="200" Width="400">
+        Title="MTD Swapper" Height="200" Width="400" Icon="/MTDSwapper.ico">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
@@ -19,10 +19,11 @@
             <TextBlock Text="Human Phantoms to get rid of red aura around red phantoms so they look human" TextWrapping="Wrap" TextAlignment="Center" HorizontalAlignment="Center" Height="33" Width="334"/>
             <TextBlock Text="Red Phantom button changes them back." TextWrapping="Wrap" TextAlignment="Center" HorizontalAlignment="Center" Height="20" Width="334"/>
             <TextBlock Text="Restart Dark Souls after patching" TextWrapping="Wrap" TextAlignment="Center" HorizontalAlignment="Center" Height="15" Width="334"/>
+            <TextBlock Text="Patching Complete" Name="lblComplete" Visibility="Hidden" TextWrapping="Wrap" TextAlignment="Center" HorizontalAlignment="Center" Height="15" Width="334"/>
         </StackPanel>
         <StackPanel Grid.Row="1" Margin="0,10,0,0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" >
-            <Button Content="Human Phantoms" Margin="0,0,0,0" Height="25" Click="ButtonHuman" />
-            <Button Content="Red Phantoms" Width="100" Height="25" Margin="125,0,0,0" Click="ButtonRed" />
+            <Button x:Name="btnHuman" Content="Human Phantoms" Margin="0,0,0,0" Height="25" Click="ButtonHuman" />
+            <Button x:Name="btnRed" Content="Red Phantoms" Width="100" Height="25" Margin="125,0,0,0" Click="ButtonRed" />
         </StackPanel>
     </Grid>
 </Window>
