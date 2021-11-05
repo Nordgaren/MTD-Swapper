@@ -28,6 +28,7 @@ namespace MTD_Swapper_UI
             Timer.Elapsed += HideCompletedText;
             Timer.Interval = 5000;
             Timer.AutoReset = false;
+            WindowStartupLocation = WindowStartupLocation.CenterScreen;
         }
 
         private void HideCompletedText(object sender, ElapsedEventArgs e)
