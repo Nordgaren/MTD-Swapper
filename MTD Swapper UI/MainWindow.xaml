@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MTD_Swapper_UI"
         mc:Ignorable="d"
-        Title="MTD Swapper" Height="200" Width="400" Icon="/MTDSwapper.ico">
+        Title="MTD Swapper" Height="250" Width="400" Icon="/MTDSwapper.ico">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
@@ -15,15 +15,33 @@
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="0" Margin="0,10,0,0" >
+        <StackPanel Grid.Row="0" Margin="0,10,0,-69" Grid.RowSpan="2" >
             <TextBlock Text="Human Phantoms to get rid of red aura around red phantoms so they look human" TextWrapping="Wrap" TextAlignment="Center" HorizontalAlignment="Center" Height="33" Width="334"/>
             <TextBlock Text="Red Phantom button changes them back." TextWrapping="Wrap" TextAlignment="Center" HorizontalAlignment="Center" Height="20" Width="334"/>
             <TextBlock Text="Restart Dark Souls after patching" TextWrapping="Wrap" TextAlignment="Center" HorizontalAlignment="Center" Height="15" Width="334"/>
             <TextBlock Text="Patching Complete" Name="lblComplete" Visibility="Hidden" TextWrapping="Wrap" TextAlignment="Center" HorizontalAlignment="Center" Height="15" Width="334"/>
+            <StackPanel Grid.Row="1" Margin="0,10,0,0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" >
+                <StackPanel>
+                    <TextBlock Text="Blue" HorizontalAlignment="Center"/>
+                    <Button x:Name="btnVanillaBlue" Content="Vanilla Phantoms" Height="25"  Click="ButtonVanillaBlue" />
+                    <Button x:Name="btnOutlineBlue" Content="Outline Phantoms" Height="25" Margin="0,10,0,0"  Click="ButtonOutlineBlue" />
+                    <Button x:Name="btnHumanBlue" Content="Human Phantoms" Height="25" Margin="0,10,0,0"  Click="ButtonHumanBlue" />
+                </StackPanel>
+                <StackPanel>
+                    <TextBlock Text="Gold" HorizontalAlignment="Center" Margin="25,0,0,0"/>
+                    <Button x:Name="btnVanillagold" Content="Vanilla Phantoms" Width="100" Height="25" Margin="25,0,0,0" Click="ButtonVanillaGold" />
+                    <Button x:Name="btnOutlinegold" Content="Outline Phantoms" Width="100" Height="25" Margin="25,10,0,0" Click="ButtonOutlineGold" />
+                    <Button x:Name="btnHumangold" Content="Human Phantoms" Width="100" Height="25" Margin="25,10,0,0" Click="ButtonHumanGold" />
+                </StackPanel>
+                <StackPanel>
+                    <TextBlock Text="Red" HorizontalAlignment="Center" Margin="25,0,0,0"/>
+                    <Button x:Name="btnVanillaRed" Content="Vanilla Phantoms" Width="100" Height="25" Margin="25,0,0,0" Click="ButtonVanillaRed" />
+                    <Button x:Name="btnOutlineRed" Content="Outline Phantoms" Width="100" Height="25" Margin="25,10,0,0" Click="ButtonOutlineRed" />
+                    <Button x:Name="btnHumanRed" Content="Human Phantoms" Width="100" Height="25" Margin="25,10,0,0" Click="ButtonHumanRed" />
+                </StackPanel>
+            </StackPanel>
         </StackPanel>
-        <StackPanel Grid.Row="1" Margin="0,10,0,0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" >
-            <Button x:Name="btnHuman" Content="Human Phantoms" Margin="0,0,0,0" Height="25" Click="ButtonHuman" />
-            <Button x:Name="btnRed" Content="Red Phantoms" Width="100" Height="25" Margin="125,0,0,0" Click="ButtonRed" />
-        </StackPanel>
+       
+
     </Grid>
 </Window>

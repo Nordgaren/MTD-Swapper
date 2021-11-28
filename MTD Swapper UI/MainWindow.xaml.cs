@@ -39,26 +39,97 @@ namespace MTD_Swapper_UI
             });
         }
 
-        private void ButtonHuman(object sender, RoutedEventArgs e)
-        {
-            var btn = sender as Button;
-            btn.Background = Brushes.DarkGray;
-            MTDPatcher.PatchMTDs(true);
-            lblComplete.Visibility = Visibility.Visible;
-            btn.Background = Brushes.LightGray;
-            Timer.Start();
-        }
-
         Timer Timer = new Timer();
 
-        private void ButtonRed(object sender, RoutedEventArgs e)
+        private void ButtonVanillaBlue(object sender, RoutedEventArgs e)
         {
             var btn = sender as Button;
             btn.Background = Brushes.DarkGray;
-            MTDPatcher.PatchMTDs(false);
+            MTDPatcher.PatchVanillaBlues();
             lblComplete.Visibility = Visibility.Visible;
             btn.Background = Brushes.LightGray;
             Timer.Start();
         }
+
+        private void ButtonOutlineBlue(object sender, RoutedEventArgs e)
+        {
+            var btn = sender as Button;
+            btn.Background = Brushes.DarkGray;
+            MTDPatcher.PatchOutlineBlues();
+            lblComplete.Visibility = Visibility.Visible;
+            btn.Background = Brushes.LightGray;
+            Timer.Start();
+        }
+
+        private void ButtonHumanBlue(object sender, RoutedEventArgs e)
+        {
+            var btn = sender as Button;
+            btn.Background = Brushes.DarkGray;
+            MTDPatcher.PatchHumanBlues();
+            lblComplete.Visibility = Visibility.Visible;
+            btn.Background = Brushes.LightGray;
+            Timer.Start();
+        }
+
+        private void ButtonVanillaGold(object sender, RoutedEventArgs e)
+        {
+            var btn = sender as Button;
+            btn.Background = Brushes.DarkGray;
+            MTDPatcher.PatchVanillaGolds();
+            lblComplete.Visibility = Visibility.Visible;
+            btn.Background = Brushes.LightGray;
+            Timer.Start();
+        }
+
+        private void ButtonOutlineGold(object sender, RoutedEventArgs e)
+        {
+            var btn = sender as Button;
+            btn.Background = Brushes.DarkGray;
+            MTDPatcher.PatchOutlineGolds();
+            lblComplete.Visibility = Visibility.Visible;
+            btn.Background = Brushes.LightGray;
+            Timer.Start();
+        }
+
+        private void ButtonHumanGold(object sender, RoutedEventArgs e)
+        {
+            var btn = sender as Button;
+            btn.Background = Brushes.DarkGray;
+            MTDPatcher.PatchHumanGolds();
+            lblComplete.Visibility = Visibility.Visible;
+            btn.Background = Brushes.LightGray;
+            Timer.Start();
+        }
+
+        private void ButtonVanillaRed(object sender, RoutedEventArgs e)
+        {
+            var btn = sender as Button;
+            btn.Background = Brushes.DarkGray;
+            MTDPatcher.PatchVanillaReds();
+            lblComplete.Visibility = Visibility.Visible;
+            btn.Background = Brushes.LightGray;
+            Timer.Start();
+        }
+
+        private void ButtonOutlineRed(object sender, RoutedEventArgs e)
+        {
+            var btn = sender as Button;
+            btn.Background = Brushes.DarkGray;
+            MTDPatcher.PatchOutlineReds();
+            lblComplete.Visibility = Visibility.Visible;
+            btn.Background = Brushes.LightGray;
+            Timer.Start();
+        }
+
+        private void ButtonHumanRed(object sender, RoutedEventArgs e)
+        {
+            var btn = sender as Button;
+            btn.Background = Brushes.DarkGray;
+            MTDPatcher.PatchHumanReds();
+            lblComplete.Visibility = Visibility.Visible;
+            btn.Background = Brushes.LightGray;
+            Timer.Start();
+        }
+
     }
 }
