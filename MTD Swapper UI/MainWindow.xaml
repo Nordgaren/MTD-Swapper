@@ -22,7 +22,7 @@
             <TextBlock Text="Patching Complete" Name="lblComplete" Visibility="Hidden" TextWrapping="Wrap" TextAlignment="Center" HorizontalAlignment="Center" Height="15" Width="334"/>
             <StackPanel Grid.Row="1" Margin="0,10,0,0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" >
                 <StackPanel>
-                    <TextBlock Text="Blue" HorizontalAlignment="Center"/>
+                    <TextBlock Text="Blue (white)" HorizontalAlignment="Center"/>
                     <Button x:Name="btnVanillaBlue" Content="Vanilla Phantoms" Height="25"  Click="ButtonVanillaBlue" />
                     <Button x:Name="btnOutlineBlue" Content="Outline Phantoms" Height="25" Margin="0,10,0,0"  Click="ButtonOutlineBlue" />
                     <Button x:Name="btnHumanBlue" Content="Human Phantoms" Height="25" Margin="0,10,0,0"  Click="ButtonHumanBlue" />
