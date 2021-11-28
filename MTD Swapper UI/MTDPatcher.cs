@@ -7,13 +7,7 @@ namespace MTD_Swapper
 {
     public class MTDPatcher
     {
-#if DEBUG
-        public static readonly string ExeDir = @"F:\Steam\steamapps\common\DARK SOULS REMASTERED";
-
-#else
         public static readonly string ExeDir = Path.GetDirectoryName(Process.GetCurrentProcess().MainModule.FileName);
-
-#endif
 
         private static bool DSR = File.Exists($@"{ExeDir}\DarkSoulsRemastered.exe");
 
