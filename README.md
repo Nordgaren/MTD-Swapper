@@ -1,7 +1,7 @@
 # MTD-Swapper
 Swaps Dark Souls PTDE MTDs so that re phantoms appear as human (Useful for Remastest Arena + Free For All play)
 
-# Requirements  
+# Requirements   
 [Dot Net 5 x64](https://dotnet.microsoft.com/download/dotnet/5.0)
 
 ## Instructions
